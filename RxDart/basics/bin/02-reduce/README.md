@@ -25,9 +25,9 @@ Stream<int> getStreamOfNumbers() async* {
 - Function: `getStreamOfNumbers()` is an asynchronous generator function that returns a `Stream<int>`.
 - Numbers List: It defines a constant list of integers to emit.
 - Async Iteration:
-- - It loops over each number in the list.
-- - Introduces a delay of 300 milliseconds before emitting each number to simulate asynchronous data arrival.
-- - Uses `yield` to emit each number into the stream.
+  - It loops over each number in the list.
+  - Introduces a delay of 300 milliseconds before emitting each number to simulate asynchronous data arrival.
+  - Uses `yield` to emit each number into the stream.
 
 ### Using the reduce Method
 ```dart
@@ -58,8 +58,8 @@ Future<T> reduce(T combine(T previous, T element));
 ### Behavior:
 - The stream must emit at least one event; otherwise, the future returned by `reduce` will complete with an error (`StateError`).
 - The reducer function is applied sequentially:
-- - Starts with the first element as the initial value.
-- - For each subsequent element, it applies the `combine` function, passing in the accumulated value and the current element.
+  - Starts with the first element as the initial value.
+  - For each subsequent element, it applies the `combine` function, passing in the accumulated value and the current element.
 - The future completes with the final accumulated value once the stream is done.
 
 ## How It Works
